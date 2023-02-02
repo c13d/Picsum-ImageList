@@ -13,6 +13,7 @@
 		F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */; };
 		F066FD53298BA1D800290D99 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD52298BA1D800290D99 /* ImageModel.swift */; };
 		F066FD55298BA2B000290D99 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD54298BA2B000290D99 /* ImageDetailViewController.swift */; };
+		F066FD57298BA85F00290D99 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */; };
 		F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */; };
 		F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */; };
 		F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCellBackView.swift; sourceTree = "<group>"; };
 		F066FD52298BA1D800290D99 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		F066FD54298BA2B000290D99 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		F0FDC0ED298B759400DE2AA6 /* Picsum-ImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsum-ImageList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				F066FD54298BA2B000290D99 /* ImageDetailViewController.swift */,
+				F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
 				F066FD4E298B89F200290D99 /* UIFont+Utils.swift in Sources */,
 				F0FDC10B298B769800DE2AA6 /* MainViewController.swift in Sources */,
+				F066FD57298BA85F00290D99 /* CommentTableViewCell.swift in Sources */,
 				F066FD55298BA2B000290D99 /* ImageDetailViewController.swift in Sources */,
 				F066FD53298BA1D800290D99 /* ImageModel.swift in Sources */,
 			);
