@@ -20,11 +20,9 @@ class MainViewController: UIViewController{
         configureNavBar()
         setup()
         layout()
-        
         bindTableView()
-        let dummyString = ["andi","budi","hello"]
         
-        imageViewModel.imageListResult.accept(dummyString)
+        imageViewModel.fetchImages()
     }
     
 }
@@ -39,7 +37,7 @@ extension MainViewController{
             
         }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(String.self).subscribe { model in
+        tableView.rx.modelSelected(ImageModel.self).subscribe { model in
             let imageDetailViewController = ImageDetailViewController()
             imageDetailViewController.bind(model: model)
             self.navigationController?.pushViewController(imageDetailViewController, animated: true)

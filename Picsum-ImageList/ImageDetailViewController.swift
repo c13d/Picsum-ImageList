@@ -27,7 +27,7 @@ class ImageDetailViewController: UIViewController{
         let dummyList = ["a","b","c"]
         commentListResult.accept(dummyList)
     }
-    func bind(model: String){
+    func bind(model: ImageModel){
         print(model)
         
         imageImageView.image = UIImage(named: "sampleImage")

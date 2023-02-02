@@ -16,6 +16,7 @@
 		F066FD57298BA85F00290D99 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */; };
 		F066FD59298BF68600290D99 /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD58298BF68600290D99 /* ProfilePictureView.swift */; };
 		F066FD5B298BFBB500290D99 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD5A298BFBB500290D99 /* ImageViewModel.swift */; };
+		F066FD5E298BFE1F00290D99 /* DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD5D298BFE1F00290D99 /* DownloadImage.swift */; };
 		F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */; };
 		F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */; };
 		F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 		F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		F066FD58298BF68600290D99 /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
 		F066FD5A298BFBB500290D99 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		F066FD5D298BFE1F00290D99 /* DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImage.swift; sourceTree = "<group>"; };
 		F0FDC0ED298B759400DE2AA6 /* Picsum-ImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsum-ImageList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		F066FD5C298BFE1000290D99 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F066FD5D298BFE1F00290D99 /* DownloadImage.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		F0FDC0E4298B759400DE2AA6 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		F0FDC0EF298B759400DE2AA6 /* Picsum-ImageList */ = {
 			isa = PBXGroup;
 			children = (
+				F066FD5C298BFE1000290D99 /* Service */,
 				F066FD51298BA1C700290D99 /* Model */,
 				F0FDC108298B762100DE2AA6 /* Main */,
 				F0FDC109298B768700DE2AA6 /* Detail */,
@@ -272,6 +283,7 @@
 				F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */,
 				F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */,
 				F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */,
+				F066FD5E298BFE1F00290D99 /* DownloadImage.swift in Sources */,
 				F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */,
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
 				F066FD4E298B89F200290D99 /* UIFont+Utils.swift in Sources */,

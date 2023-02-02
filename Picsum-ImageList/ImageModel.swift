@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ImageModel{
+struct ImageModel: Decodable{
     let id: String
     let author: String
     let download_url: String
