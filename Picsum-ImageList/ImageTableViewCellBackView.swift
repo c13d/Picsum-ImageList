@@ -15,7 +15,6 @@ class ImageTableViewCellBackView: UIView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -29,14 +28,6 @@ class ImageTableViewCellBackView: UIView{
     override func layoutSubviews() {
         super.layoutSubviews()
         addShadow()
-    }
-    
-    func setup(){
-        clipsToBounds = true
-        
-//        layer.borderWidth = 1
-        layer.cornerRadius = cornerRadius
-//        layer.borderColor = UIColor.white.cgColor
     }
     
     func addShadow(){
@@ -53,7 +44,4 @@ class ImageTableViewCellBackView: UIView{
         
         layer.insertSublayer(shadowLayer, at: 0)
     }
-    
-    
-    
 }
