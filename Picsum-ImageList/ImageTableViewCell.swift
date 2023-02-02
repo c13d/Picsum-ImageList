@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import SDWebImage
 
 class ImageTableViewCell: UITableViewCell{
     var disposeBag = DisposeBag()
@@ -24,6 +25,8 @@ class ImageTableViewCell: UITableViewCell{
     let imageSize = rowHeight
     let margin = CGFloat(8)
     
+    let downloadImage = DownloadImage.instance
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -40,9 +43,15 @@ class ImageTableViewCell: UITableViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(){
-        authorLabel.text = "Any Name"
-        imageImageView.image = UIImage(named: "sampleImage")
+    func configureCell(imageModel: ImageModel){
+        authorLabel.text = "\(imageModel.author)"
+        
+        imageImageView.sd_setImage(with: URL(string: imageModel.download_url)){ [weak self]image,_,_,_ in
+            guard let self = self else { return }
+            
+            self.imageImageView.image = self.imageImageView.image?.resizeImageTo(size: CGSize(width: self.imageSize, height: self.imageSize))
+            
+        }
     }
 }
 

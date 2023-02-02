@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct ImageModel: Decodable{
+struct ImageModel: Codable{
     let id: String
     let author: String
     let download_url: String

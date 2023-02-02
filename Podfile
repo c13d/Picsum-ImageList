@@ -9,5 +9,7 @@ target 'Picsum-ImageList' do
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Alamofire'
+pod 'AlamofireImage'
+pod 'SDWebImage'
 
 end

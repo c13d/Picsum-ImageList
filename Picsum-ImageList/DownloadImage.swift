@@ -14,7 +14,6 @@ class DownloadImage{
     let limit = 10
     
     func downloadImageList(page: Int, completion: @escaping (_ resultModel: [ImageModel]) -> ()) {
-        
         AF.request(getImageURL + "\(page)" + "&limit=\(limit)").response  { response in
             switch response.result {
             case .success(let data):
@@ -29,6 +28,4 @@ class DownloadImage{
             }
         }
     }
-    
-    
 }
