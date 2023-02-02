@@ -49,6 +49,7 @@ extension MainViewController{
         // Table View
         tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: ImageTableViewCell.reuseID)
         tableView.rowHeight = ImageTableViewCell.rowHeight
+        tableView.separatorStyle = .none
         
         
         tableView.translatesAutoresizingMaskIntoConstraints = false

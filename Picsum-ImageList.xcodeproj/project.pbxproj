@@ -10,6 +10,7 @@
 		E54FEA1049161570079E6980 /* Pods_Picsum_ImageList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */; };
 		F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */; };
 		F066FD4E298B89F200290D99 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4D298B89F200290D99 /* UIFont+Utils.swift */; };
+		F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */; };
 		F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */; };
 		F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */; };
 		F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 		AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picsum_ImageList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		F066FD4D298B89F200290D99 /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
+		F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCellBackView.swift; sourceTree = "<group>"; };
 		F0FDC0ED298B759400DE2AA6 /* Picsum-ImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsum-ImageList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
 				F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */,
+				F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */,
+				F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */,
 				F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */,
 				F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */,
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
