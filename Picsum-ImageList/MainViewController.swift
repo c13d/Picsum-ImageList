@@ -13,7 +13,7 @@ class MainViewController: UIViewController{
     
     let disposeBag = DisposeBag()
     let tableView = UITableView()
-    let imageListResult = BehaviorRelay<[String]>(value: [])
+    let imageViewModel = ImageViewModel.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +24,14 @@ class MainViewController: UIViewController{
         bindTableView()
         let dummyString = ["andi","budi","hello"]
         
-        imageListResult.accept(dummyString)
+        imageViewModel.imageListResult.accept(dummyString)
     }
     
 }
 
 extension MainViewController{
     func bindTableView(){
-        imageListResult.asObservable()
+        imageViewModel.imageListResult.asObservable()
             .bind(to: tableView.rx
                 .items(cellIdentifier: ImageTableViewCell.reuseID, cellType: ImageTableViewCell.self))
         {   index, element, cell in
