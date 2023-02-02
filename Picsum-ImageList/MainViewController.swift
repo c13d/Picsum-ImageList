@@ -38,6 +38,13 @@ extension MainViewController{
             cell.configureCell()
             
         }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(String.self).subscribe { model in
+            let imageDetailViewController = ImageDetailViewController()
+            imageDetailViewController.bind(model: model)
+            self.navigationController?.pushViewController(imageDetailViewController, animated: true)
+            
+        }.disposed(by: disposeBag)
     }
 }
 
