@@ -15,10 +15,12 @@ class CommentTableViewCell: UITableViewCell {
     static let reuseID = "CommentTableViewCell"
     static let rowHeight: CGFloat = 50
     
+    let profilePictureView = ProfilePictureView()
     let stackView = UIStackView()
     let nameLabel = UILabel()
     let commentLabel = UILabel()
     let dateAddedLabel = UILabel()
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -40,6 +42,8 @@ class CommentTableViewCell: UITableViewCell {
         nameLabel.text = "Any Name"
         commentLabel.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         dateAddedLabel.text = "yesterday"
+        
+        profilePictureView.configureView(text: "TM")
     }
 }
 
@@ -54,11 +58,13 @@ extension CommentTableViewCell{
         dateAddedLabel.textColor = .gray
         commentLabel.numberOfLines = 0
         
+        profilePictureView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         commentLabel.translatesAutoresizingMaskIntoConstraints = false
         dateAddedLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        addSubview(profilePictureView)
         addSubview(stackView)
         
         stackView.addArrangedSubview(nameLabel)
@@ -68,9 +74,15 @@ extension CommentTableViewCell{
     
     func layout(){
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            profilePictureView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            profilePictureView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            profilePictureView.heightAnchor.constraint(equalToConstant: 50),
+            profilePictureView.widthAnchor.constraint(equalToConstant: 50),
+            
+            stackView.topAnchor.constraint(equalTo: profilePictureView.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: profilePictureView.trailingAnchor, constant: 8),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
     }
