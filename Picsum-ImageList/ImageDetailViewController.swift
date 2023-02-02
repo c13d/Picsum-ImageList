@@ -58,7 +58,7 @@ extension ImageDetailViewController{
         
         // Table View
         tableView.register(CommentTableViewCell.self, forCellReuseIdentifier: CommentTableViewCell.reuseID)
-        tableView.rowHeight = CommentTableViewCell.rowHeight
+        tableView.estimatedRowHeight = CommentTableViewCell.rowHeight
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         imageImageView.translatesAutoresizingMaskIntoConstraints = false

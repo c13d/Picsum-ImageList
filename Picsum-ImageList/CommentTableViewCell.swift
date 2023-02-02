@@ -15,7 +15,10 @@ class CommentTableViewCell: UITableViewCell {
     static let reuseID = "CommentTableViewCell"
     static let rowHeight: CGFloat = 50
     
+    let stackView = UIStackView()
     let nameLabel = UILabel()
+    let commentLabel = UILabel()
+    let dateAddedLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -35,22 +38,40 @@ class CommentTableViewCell: UITableViewCell {
     
     func configureCell(){
         nameLabel.text = "Any Name"
+        commentLabel.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        dateAddedLabel.text = "yesterday"
     }
 }
 
 extension CommentTableViewCell{
     func setup(){
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 8
         
-        addSubview(nameLabel)
+        nameLabel.font = UIFont.preferredFont(for: .headline, weight: .bold)
+        commentLabel.font = UIFont.preferredFont(for: .body, weight: .regular)
+        dateAddedLabel.font = UIFont.preferredFont(for: .footnote, weight: .bold)
+        dateAddedLabel.textColor = .gray
+        commentLabel.numberOfLines = 0
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        commentLabel.translatesAutoresizingMaskIntoConstraints = false
+        dateAddedLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(stackView)
+        
+        stackView.addArrangedSubview(nameLabel)
+        stackView.addArrangedSubview(commentLabel)
+        stackView.addArrangedSubview(dateAddedLabel)
     }
     
     func layout(){
-        
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: topAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
     }
 }
