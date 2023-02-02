@@ -129,8 +129,8 @@
 				F066FD51298BA1C700290D99 /* Model */,
 				F0FDC108298B762100DE2AA6 /* Main */,
 				F0FDC109298B768700DE2AA6 /* Detail */,
-				F0FDC107298B75D600DE2AA6 /* File */,
 				F066FD4C298B89DE00290D99 /* Utils */,
+				F0FDC107298B75D600DE2AA6 /* File */,
 			);
 			path = "Picsum-ImageList";
 			sourceTree = "<group>";
