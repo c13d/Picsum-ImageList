@@ -22,6 +22,8 @@
 		F066FD67298C753500290D99 /* lastNames.json in Resources */ = {isa = PBXBuildFile; fileRef = F066FD64298C753500290D99 /* lastNames.json */; };
 		F066FD68298C753500290D99 /* nouns.json in Resources */ = {isa = PBXBuildFile; fileRef = F066FD65298C753500290D99 /* nouns.json */; };
 		F066FD69298C753500290D99 /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = F066FD66298C753500290D99 /* verbs.json */; };
+		F066FD6B298C768300290D99 /* DownloadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD6A298C768300290D99 /* DownloadJson.swift */; };
+		F066FD6D298C78EC00290D99 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD6C298C78EC00290D99 /* CommentViewModel.swift */; };
 		F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */; };
 		F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */; };
 		F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */; };
@@ -47,6 +49,8 @@
 		F066FD64298C753500290D99 /* lastNames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lastNames.json; sourceTree = "<group>"; };
 		F066FD65298C753500290D99 /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
 		F066FD66298C753500290D99 /* verbs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		F066FD6A298C768300290D99 /* DownloadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadJson.swift; sourceTree = "<group>"; };
+		F066FD6C298C78EC00290D99 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		F0FDC0ED298B759400DE2AA6 /* Picsum-ImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsum-ImageList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F066FD5D298BFE1F00290D99 /* DownloadImage.swift */,
+				F066FD6A298C768300290D99 /* DownloadJson.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				F066FD54298BA2B000290D99 /* ImageDetailViewController.swift */,
 				F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */,
 				F066FD58298BF68600290D99 /* ProfilePictureView.swift */,
+				F066FD6C298C78EC00290D99 /* CommentViewModel.swift */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F066FD6D298C78EC00290D99 /* CommentViewModel.swift in Sources */,
 				F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */,
 				F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */,
 				F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */,
@@ -315,6 +322,7 @@
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
 				F066FD4E298B89F200290D99 /* UIFont+Utils.swift in Sources */,
 				F066FD5B298BFBB500290D99 /* ImageViewModel.swift in Sources */,
+				F066FD6B298C768300290D99 /* DownloadJson.swift in Sources */,
 				F0FDC10B298B769800DE2AA6 /* MainViewController.swift in Sources */,
 				F066FD59298BF68600290D99 /* ProfilePictureView.swift in Sources */,
 				F066FD57298BA85F00290D99 /* CommentTableViewCell.swift in Sources */,

@@ -10,7 +10,6 @@ import RxSwift
 import RxCocoa
 
 class MainViewController: UIViewController{
-    
     let disposeBag = DisposeBag()
     let tableView = UITableView()
     let imageViewModel = ImageViewModel.instance
@@ -24,7 +23,6 @@ class MainViewController: UIViewController{
         
         imageViewModel.fetchImages()
     }
-    
 }
 
 extension MainViewController{
