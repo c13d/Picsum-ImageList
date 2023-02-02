@@ -9,23 +9,21 @@
 /* Begin PBXBuildFile section */
 		F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */; };
 		F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */; };
-		F0FDC0F5298B759400DE2AA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F4298B759400DE2AA6 /* ViewController.swift */; };
-		F0FDC0F8298B759500DE2AA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FDC0F6298B759400DE2AA6 /* Main.storyboard */; };
 		F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */; };
 		F0FDC0FD298B759600DE2AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FDC0FC298B759600DE2AA6 /* Assets.xcassets */; };
 		F0FDC100298B759600DE2AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FDC0FE298B759600DE2AA6 /* LaunchScreen.storyboard */; };
+		F0FDC10B298B769800DE2AA6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC10A298B769800DE2AA6 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F0FDC0ED298B759400DE2AA6 /* Picsum-ImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsum-ImageList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0FDC0F4298B759400DE2AA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F0FDC0F7298B759500DE2AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0FDC0FA298B759500DE2AA6 /* Picsum_ImageList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Picsum_ImageList.xcdatamodel; sourceTree = "<group>"; };
 		F0FDC0FC298B759600DE2AA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0FDC0FF298B759600DE2AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0FDC101298B759600DE2AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FDC10A298B769800DE2AA6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +56,39 @@
 		F0FDC0EF298B759400DE2AA6 /* Picsum-ImageList */ = {
 			isa = PBXGroup;
 			children = (
+				F0FDC108298B762100DE2AA6 /* Main */,
+				F0FDC109298B768700DE2AA6 /* Detail */,
+				F0FDC107298B75D600DE2AA6 /* File */,
+			);
+			path = "Picsum-ImageList";
+			sourceTree = "<group>";
+		};
+		F0FDC107298B75D600DE2AA6 /* File */ = {
+			isa = PBXGroup;
+			children = (
 				F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */,
 				F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */,
-				F0FDC0F4298B759400DE2AA6 /* ViewController.swift */,
-				F0FDC0F6298B759400DE2AA6 /* Main.storyboard */,
 				F0FDC0FC298B759600DE2AA6 /* Assets.xcassets */,
 				F0FDC0FE298B759600DE2AA6 /* LaunchScreen.storyboard */,
 				F0FDC101298B759600DE2AA6 /* Info.plist */,
 				F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */,
 			);
-			path = "Picsum-ImageList";
+			name = File;
+			sourceTree = "<group>";
+		};
+		F0FDC108298B762100DE2AA6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		F0FDC109298B768700DE2AA6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +151,6 @@
 			files = (
 				F0FDC100298B759600DE2AA6 /* LaunchScreen.storyboard in Resources */,
 				F0FDC0FD298B759600DE2AA6 /* Assets.xcassets in Resources */,
-				F0FDC0F8298B759500DE2AA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,23 +162,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */,
-				F0FDC0F5298B759400DE2AA6 /* ViewController.swift in Sources */,
 				F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */,
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
+				F0FDC10B298B769800DE2AA6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F0FDC0F6298B759400DE2AA6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F0FDC0F7298B759500DE2AA6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F0FDC0FE298B759600DE2AA6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +308,6 @@
 				INFOPLIST_FILE = "Picsum-ImageList/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +335,6 @@
 				INFOPLIST_FILE = "Picsum-ImageList/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
