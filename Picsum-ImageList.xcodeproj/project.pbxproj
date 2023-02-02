@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E54FEA1049161570079E6980 /* Pods_Picsum_ImageList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */; };
+		F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */; };
 		F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */; };
 		F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */; };
 		F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		663F118B29CD7172DE23E519 /* Pods-Picsum-ImageList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picsum-ImageList.debug.xcconfig"; path = "Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList.debug.xcconfig"; sourceTree = "<group>"; };
+		AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picsum_ImageList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		F0FDC0ED298B759400DE2AA6 /* Picsum-ImageList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsum-ImageList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FDC0F0298B759400DE2AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0FDC0F2298B759400DE2AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		F0FDC0FF298B759600DE2AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0FDC101298B759600DE2AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0FDC10A298B769800DE2AA6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F12A4D51746FEF1894E95702 /* Pods-Picsum-ImageList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picsum-ImageList.release.xcconfig"; path = "Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54FEA1049161570079E6980 /* Pods_Picsum_ImageList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A19E392F1E6402A55FEC411A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				663F118B29CD7172DE23E519 /* Pods-Picsum-ImageList.debug.xcconfig */,
+				F12A4D51746FEF1894E95702 /* Pods-Picsum-ImageList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A896DB9604C7F2FFCD84EEAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0FDC0E4298B759400DE2AA6 = {
 			isa = PBXGroup;
 			children = (
 				F0FDC0EF298B759400DE2AA6 /* Picsum-ImageList */,
 				F0FDC0EE298B759400DE2AA6 /* Products */,
+				A19E392F1E6402A55FEC411A /* Pods */,
+				A896DB9604C7F2FFCD84EEAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
+				F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -98,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0FDC104298B759600DE2AA6 /* Build configuration list for PBXNativeTarget "Picsum-ImageList" */;
 			buildPhases = (
+				3A411631165D2384B9DD479F /* [CP] Check Pods Manifest.lock */,
 				F0FDC0E9298B759400DE2AA6 /* Sources */,
 				F0FDC0EA298B759400DE2AA6 /* Frameworks */,
 				F0FDC0EB298B759400DE2AA6 /* Resources */,
+				586BA6FB725D80C315A54EAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,7 +156,7 @@
 				};
 			};
 			buildConfigurationList = F0FDC0E8298B759400DE2AA6 /* Build configuration list for PBXProject "Picsum-ImageList" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -156,6 +185,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A411631165D2384B9DD479F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Picsum-ImageList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		586BA6FB725D80C315A54EAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0FDC0E9298B759400DE2AA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -163,6 +234,7 @@
 			files = (
 				F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */,
 				F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */,
+				F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */,
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
 				F0FDC10B298B769800DE2AA6 /* MainViewController.swift in Sources */,
 			);
@@ -298,6 +370,7 @@
 		};
 		F0FDC105298B759600DE2AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 663F118B29CD7172DE23E519 /* Pods-Picsum-ImageList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,6 +398,7 @@
 		};
 		F0FDC106298B759600DE2AA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12A4D51746FEF1894E95702 /* Pods-Picsum-ImageList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
