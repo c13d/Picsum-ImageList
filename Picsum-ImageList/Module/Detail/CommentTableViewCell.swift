@@ -54,7 +54,7 @@ class CommentTableViewCell: UITableViewCell {
         formatter.unitsStyle = .full
         let relativeDate = formatter.localizedString(for: date, relativeTo: Date.now)
         
-        return relativeDate
+        return relativeDate == "in 0 seconds" ? "now" : relativeDate
     }
 }
 
