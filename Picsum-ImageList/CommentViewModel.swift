@@ -37,6 +37,7 @@ class CommentViewModel{
             let randomIdxNouns = Int.random(in: 0...nouns.count-1)
             let randomIdxVerbs = Int.random(in: 0...verbs.count-1)
             comment.append(nouns[randomIdxNouns])
+            comment.append(" ")
             comment.append(verbs[randomIdxVerbs])
         }
         
@@ -44,7 +45,7 @@ class CommentViewModel{
         let lastName = lastNames[randomIdxLastName]
         let profilePictureUrl = "\(Array(firstName)[0])\(Array(lastName)[0])"
 
-        let newComment = CommentModel(profilePictureUrl: profilePictureUrl, firstName: firstName, lastName: lastName, dateAdded: Date())
+        let newComment = CommentModel(profilePictureUrl: profilePictureUrl, firstName: firstName, lastName: lastName, comment: comment, dateAdded: Date())
         
         var temp = commentListResult.value
         temp.append(newComment)

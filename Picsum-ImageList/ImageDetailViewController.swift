@@ -27,7 +27,6 @@ class ImageDetailViewController: UIViewController{
     }
     func bind(model: ImageModel){
         print(model)
-        
         imageImageView.image = UIImage(named: "sampleImage")
     }
 
@@ -39,7 +38,7 @@ extension ImageDetailViewController{
             .bind(to: tableView.rx
                 .items(cellIdentifier: CommentTableViewCell.reuseID, cellType: CommentTableViewCell.self))
         {   index, element, cell in
-            cell.configureCell()
+            cell.configureCell(commentModel: element)
         }.disposed(by: disposeBag)
         
     }

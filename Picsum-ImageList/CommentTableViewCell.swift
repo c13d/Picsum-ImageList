@@ -38,12 +38,12 @@ class CommentTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(){
-        nameLabel.text = "Any Name"
-        commentLabel.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        dateAddedLabel.text = "yesterday"
+    func configureCell(commentModel :CommentModel){
+        nameLabel.text = "\(commentModel.firstName) \(commentModel.lastName)"
+        commentLabel.text = commentModel.comment
+        dateAddedLabel.text = "\(commentModel.dateAdded)"
         
-        profilePictureView.configureView(text: "TM")
+        profilePictureView.configureView(text: commentModel.profilePictureUrl)
     }
 }
 

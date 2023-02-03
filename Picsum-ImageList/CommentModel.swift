@@ -11,5 +11,6 @@ struct CommentModel{
     let profilePictureUrl: String
     let firstName: String
     let lastName: String
+    let comment: String
     let dateAdded: Date
 }
