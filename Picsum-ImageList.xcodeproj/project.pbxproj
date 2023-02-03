@@ -119,17 +119,6 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		F042D70D298CB5D3008F58BD /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
-				F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */,
-				F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */,
-				F066FD5A298BFBB500290D99 /* ImageViewModel.swift */,
-			);
-			name = Main;
-			sourceTree = "<group>";
-		};
 		F042D70E298CB5EB008F58BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +145,17 @@
 				F066FD6E298C7A0A00290D99 /* CommentModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F042D711298CB6B5008F58BD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
+				F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */,
+				F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */,
+				F066FD5A298BFBB500290D99 /* ImageViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F066FD5C298BFE1000290D99 /* Service */ = {
@@ -197,10 +197,10 @@
 		F0FDC0EF298B759400DE2AA6 /* Picsum-ImageList */ = {
 			isa = PBXGroup;
 			children = (
+				F042D711298CB6B5008F58BD /* Main */,
 				F042D710298CB68C008F58BD /* Model */,
 				F042D70F298CB5FA008F58BD /* Sevice */,
 				F042D70E298CB5EB008F58BD /* Models */,
-				F042D70D298CB5D3008F58BD /* Main */,
 				F042D70C298CB5BE008F58BD /* Detail */,
 				F042D70B298CB599008F58BD /* Utils */,
 				F066FD70298C818800290D99 /* Resources */,
