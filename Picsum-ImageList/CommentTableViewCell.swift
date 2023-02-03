@@ -44,9 +44,17 @@ class CommentTableViewCell: UITableViewCell {
         
         nameLabel.text = "\(firstName) \(lastName)"
         commentLabel.text = comment
-        dateAddedLabel.text = "\(dateAdded)"
+        dateAddedLabel.text = getRelativeDate(date: dateAdded)
         
         profilePictureView.configureView(text: profilePictureUrl)
+    }
+    
+    func getRelativeDate(date: Date) -> String{
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        let relativeDate = formatter.localizedString(for: date, relativeTo: Date.now)
+        
+        return relativeDate
     }
 }
 
