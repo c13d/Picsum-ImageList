@@ -39,8 +39,8 @@
 /* Begin PBXFileReference section */
 		663F118B29CD7172DE23E519 /* Pods-Picsum-ImageList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picsum-ImageList.debug.xcconfig"; path = "Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList.debug.xcconfig"; sourceTree = "<group>"; };
 		AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picsum_ImageList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CommentEntity+CoreDataClass.swift"; path = "Picsum-ImageList/Model/CommentEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CommentEntity+CoreDataProperties.swift"; path = "Picsum-ImageList/Model/CommentEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		F042D709298CA065008F58BD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		F066FD4D298B89F200290D99 /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
@@ -130,15 +130,11 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
-		F042D70E298CB5EB008F58BD /* Model */ = {
+		F042D70E298CB5EB008F58BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */,
-				F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */,
-				F066FD52298BA1D800290D99 /* ImageModel.swift */,
-				F066FD6E298C7A0A00290D99 /* CommentModel.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		F042D70F298CB5FA008F58BD /* Sevice */ = {
@@ -149,6 +145,17 @@
 				F042D709298CA065008F58BD /* CoreDataManager.swift */,
 			);
 			path = Sevice;
+			sourceTree = "<group>";
+		};
+		F042D710298CB68C008F58BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */,
+				F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */,
+				F066FD52298BA1D800290D99 /* ImageModel.swift */,
+				F066FD6E298C7A0A00290D99 /* CommentModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F066FD5C298BFE1000290D99 /* Service */ = {
@@ -190,8 +197,9 @@
 		F0FDC0EF298B759400DE2AA6 /* Picsum-ImageList */ = {
 			isa = PBXGroup;
 			children = (
+				F042D710298CB68C008F58BD /* Model */,
 				F042D70F298CB5FA008F58BD /* Sevice */,
-				F042D70E298CB5EB008F58BD /* Model */,
+				F042D70E298CB5EB008F58BD /* Models */,
 				F042D70D298CB5D3008F58BD /* Main */,
 				F042D70C298CB5BE008F58BD /* Detail */,
 				F042D70B298CB599008F58BD /* Utils */,
