@@ -20,7 +20,7 @@ class CoreDataManager{
             let idPredicate = NSPredicate(format: "id == \(id)")
             
             let request = CommentEntity.fetchRequest() as NSFetchRequest<CommentEntity>
-            let sort = NSSortDescriptor(key: "dateAdded", ascending: true)
+            let sort = NSSortDescriptor(key: "dateAdded", ascending: false)
             
             request.predicate = idPredicate
             request.sortDescriptors = [sort]
