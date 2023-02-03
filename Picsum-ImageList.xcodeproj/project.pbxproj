@@ -99,16 +99,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F066FD4C298B89DE00290D99 /* Utils */ = {
+		F042D70B298CB599008F58BD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				F066FD4D298B89F200290D99 /* UIFont+Utils.swift */,
 				F066FD5F298C058C00290D99 /* UIImage+Utils.swift */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		F066FD51298BA1C700290D99 /* Model */ = {
+		F042D70C298CB5BE008F58BD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F066FD54298BA2B000290D99 /* ImageDetailViewController.swift */,
+				F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */,
+				F066FD58298BF68600290D99 /* ProfilePictureView.swift */,
+				F066FD6C298C78EC00290D99 /* CommentViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F042D70D298CB5D3008F58BD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
+				F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */,
+				F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */,
+				F066FD5A298BFBB500290D99 /* ImageViewModel.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		F042D70E298CB5EB008F58BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */,
@@ -119,12 +141,19 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		F066FD5C298BFE1000290D99 /* Service */ = {
+		F042D70F298CB5FA008F58BD /* Sevice */ = {
 			isa = PBXGroup;
 			children = (
 				F066FD5D298BFE1F00290D99 /* DownloadImage.swift */,
 				F066FD6A298C768300290D99 /* DownloadJson.swift */,
 				F042D709298CA065008F58BD /* CoreDataManager.swift */,
+			);
+			path = Sevice;
+			sourceTree = "<group>";
+		};
+		F066FD5C298BFE1000290D99 /* Service */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -161,12 +190,13 @@
 		F0FDC0EF298B759400DE2AA6 /* Picsum-ImageList */ = {
 			isa = PBXGroup;
 			children = (
+				F042D70F298CB5FA008F58BD /* Sevice */,
+				F042D70E298CB5EB008F58BD /* Model */,
+				F042D70D298CB5D3008F58BD /* Main */,
+				F042D70C298CB5BE008F58BD /* Detail */,
+				F042D70B298CB599008F58BD /* Utils */,
 				F066FD70298C818800290D99 /* Resources */,
 				F066FD5C298BFE1000290D99 /* Service */,
-				F066FD51298BA1C700290D99 /* Model */,
-				F0FDC108298B762100DE2AA6 /* Main */,
-				F0FDC109298B768700DE2AA6 /* Detail */,
-				F066FD4C298B89DE00290D99 /* Utils */,
 				F0FDC107298B75D600DE2AA6 /* File */,
 			);
 			path = "Picsum-ImageList";
@@ -183,28 +213,6 @@
 				F0FDC0F9298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld */,
 			);
 			name = File;
-			sourceTree = "<group>";
-		};
-		F0FDC108298B762100DE2AA6 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				F0FDC10A298B769800DE2AA6 /* MainViewController.swift */,
-				F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */,
-				F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */,
-				F066FD5A298BFBB500290D99 /* ImageViewModel.swift */,
-			);
-			name = Main;
-			sourceTree = "<group>";
-		};
-		F0FDC109298B768700DE2AA6 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				F066FD54298BA2B000290D99 /* ImageDetailViewController.swift */,
-				F066FD56298BA85F00290D99 /* CommentTableViewCell.swift */,
-				F066FD58298BF68600290D99 /* ProfilePictureView.swift */,
-				F066FD6C298C78EC00290D99 /* CommentViewModel.swift */,
-			);
-			name = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
