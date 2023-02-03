@@ -106,7 +106,7 @@ extension ImageTableViewCell{
             imageImageView.topAnchor.constraint(equalTo: backView.topAnchor),
             imageImageView.leadingAnchor.constraint(equalTo: backView.leadingAnchor),
             imageImageView.bottomAnchor.constraint(equalTo: backView.bottomAnchor),
-            imageImageView.widthAnchor.constraint(equalToConstant: imageSize),
+            imageImageView.widthAnchor.constraint(equalToConstant: imageSize-margin*2),
             
             stackView.leadingAnchor.constraint(equalTo: imageImageView.trailingAnchor),
             stackView.trailingAnchor.constraint(equalTo: backView.trailingAnchor),
