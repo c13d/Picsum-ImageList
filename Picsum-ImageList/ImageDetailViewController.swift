@@ -15,6 +15,7 @@ class ImageDetailViewController: UIViewController{
     let imageImageView = UIImageView()
     let tableView = UITableView()
     let commentViewModel = CommentViewModel.instance
+    var id: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +25,11 @@ class ImageDetailViewController: UIViewController{
         bindTableView()
     }
     func bind(model: ImageModel){
-        print(model)
+        guard let id = Int(model.id) else { return }
         imageImageView.image = UIImage(named: "sampleImage")
-        commentViewModel.fetchComments(id: Int(model.id) ?? -1)
+        commentViewModel.fetchComments(id: id)
+        
+        self.id = id
     }
 
 }
@@ -44,9 +47,19 @@ extension ImageDetailViewController{
 }
 
 extension ImageDetailViewController{
+    @objc func addTapped(){
+        if let id = id{
+            commentViewModel.addNewComment(id: id)
+        }
+    }
+}
+
+extension ImageDetailViewController{
     func setup(){
+        // Nav bar
         navigationItem.title = "Image Detail"
         view.backgroundColor = .systemBackground
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
         
         // Image View
         imageImageView.contentMode = .scaleToFill

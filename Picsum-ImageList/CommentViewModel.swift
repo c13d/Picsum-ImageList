@@ -52,7 +52,7 @@ class CommentViewModel{
         let profilePictureUrl = "\(Array(firstName)[0])\(Array(lastName)[0])"
 
         coreDataManager.addNewComment(id: id,profilePictureUrl: profilePictureUrl, firstName: firstName, lastName: lastName, comment: comment)
-        fetchComments(id: 1)
+        fetchComments(id: id)
     }
     
 }
