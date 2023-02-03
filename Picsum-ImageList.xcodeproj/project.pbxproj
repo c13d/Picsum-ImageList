@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E54FEA1049161570079E6980 /* Pods_Picsum_ImageList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */; };
+		F042D707298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */; };
+		F042D708298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */; };
+		F042D70A298CA065008F58BD /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042D709298CA065008F58BD /* CoreDataManager.swift */; };
 		F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */; };
 		F066FD4E298B89F200290D99 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4D298B89F200290D99 /* UIFont+Utils.swift */; };
 		F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */; };
@@ -36,6 +39,9 @@
 /* Begin PBXFileReference section */
 		663F118B29CD7172DE23E519 /* Pods-Picsum-ImageList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picsum-ImageList.debug.xcconfig"; path = "Target Support Files/Pods-Picsum-ImageList/Pods-Picsum-ImageList.debug.xcconfig"; sourceTree = "<group>"; };
 		AA98AEAD5A0AF20D5B45775A /* Pods_Picsum_ImageList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picsum_ImageList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		F042D709298CA065008F58BD /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F066FD4A298B7F6800290D99 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		F066FD4D298B89F200290D99 /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
 		F066FD4F298B942000290D99 /* ImageTableViewCellBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCellBackView.swift; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 		F066FD51298BA1C700290D99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F042D705298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift */,
+				F042D706298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift */,
 				F066FD52298BA1D800290D99 /* ImageModel.swift */,
 				F066FD6E298C7A0A00290D99 /* CommentModel.swift */,
 			);
@@ -116,6 +124,7 @@
 			children = (
 				F066FD5D298BFE1F00290D99 /* DownloadImage.swift */,
 				F066FD6A298C768300290D99 /* DownloadJson.swift */,
+				F042D709298CA065008F58BD /* CoreDataManager.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -316,12 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F042D707298C9FFD008F58BD /* CommentEntity+CoreDataClass.swift in Sources */,
 				F066FD6D298C78EC00290D99 /* CommentViewModel.swift in Sources */,
 				F0FDC0FB298B759500DE2AA6 /* Picsum_ImageList.xcdatamodeld in Sources */,
 				F066FD50298B942000290D99 /* ImageTableViewCellBackView.swift in Sources */,
 				F0FDC0F1298B759400DE2AA6 /* AppDelegate.swift in Sources */,
 				F066FD5E298BFE1F00290D99 /* DownloadImage.swift in Sources */,
 				F066FD4B298B7F6800290D99 /* ImageTableViewCell.swift in Sources */,
+				F042D708298C9FFD008F58BD /* CommentEntity+CoreDataProperties.swift in Sources */,
 				F0FDC0F3298B759400DE2AA6 /* SceneDelegate.swift in Sources */,
 				F066FD4E298B89F200290D99 /* UIFont+Utils.swift in Sources */,
 				F066FD5B298BFBB500290D99 /* ImageViewModel.swift in Sources */,
@@ -332,6 +343,7 @@
 				F066FD57298BA85F00290D99 /* CommentTableViewCell.swift in Sources */,
 				F066FD60298C058C00290D99 /* UIImage+Utils.swift in Sources */,
 				F066FD55298BA2B000290D99 /* ImageDetailViewController.swift in Sources */,
+				F042D70A298CA065008F58BD /* CoreDataManager.swift in Sources */,
 				F066FD53298BA1D800290D99 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

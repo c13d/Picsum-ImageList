@@ -13,8 +13,9 @@ class CommentViewModel{
     static let instance = CommentViewModel()
     let disposeBag = DisposeBag()
     let downloadJson = DownloadJson.instance
+    let coreDataManager = CoreDataManager.instance
     
-    let commentListResult = BehaviorRelay<[CommentModel]>(value: [])
+    let commentListResult = BehaviorRelay<[CommentEntity]>(value: [])
     let fetchNewData = PublishSubject<Void>()
     
     var isFetchingData = false
@@ -28,7 +29,12 @@ class CommentViewModel{
         downloadLocalJson()
     }
     
-    func fetchNewComment(){
+    func fetchComments(id: Int){
+        let temp = coreDataManager.fetchComments(id: id)
+        commentListResult.accept(temp)
+    }
+    
+    func addNewComment(id: Int){
         var comment = ""
         let randomIdxFirstName = Int.random(in: 0...firstNames.count-1)
         let randomIdxLastName = Int.random(in: 0...lastNames.count-1)
@@ -45,11 +51,8 @@ class CommentViewModel{
         let lastName = lastNames[randomIdxLastName]
         let profilePictureUrl = "\(Array(firstName)[0])\(Array(lastName)[0])"
 
-        let newComment = CommentModel(profilePictureUrl: profilePictureUrl, firstName: firstName, lastName: lastName, comment: comment, dateAdded: Date())
-        
-        var temp = commentListResult.value
-        temp.append(newComment)
-        commentListResult.accept(temp)
+        coreDataManager.addNewComment(id: id,profilePictureUrl: profilePictureUrl, firstName: firstName, lastName: lastName, comment: comment)
+        fetchComments(id: 1)
     }
     
 }

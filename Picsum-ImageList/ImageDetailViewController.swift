@@ -23,7 +23,7 @@ class ImageDetailViewController: UIViewController{
         layout()
         
         bindTableView()
-        commentViewModel.fetchNewComment()
+        commentViewModel.fetchComments(id: 1)
     }
     func bind(model: ImageModel){
         print(model)

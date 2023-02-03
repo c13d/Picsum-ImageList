@@ -38,12 +38,15 @@ class CommentTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(commentModel :CommentModel){
-        nameLabel.text = "\(commentModel.firstName) \(commentModel.lastName)"
-        commentLabel.text = commentModel.comment
-        dateAddedLabel.text = "\(commentModel.dateAdded)"
+    func configureCell(commentModel :CommentEntity){
+        guard let firstName = commentModel.firstName, let lastName = commentModel.lastName, let comment = commentModel.comment, let dateAdded = commentModel.dateAdded, let profilePictureUrl = commentModel.profilePictureUrl
+        else {return}
         
-        profilePictureView.configureView(text: commentModel.profilePictureUrl)
+        nameLabel.text = "\(firstName) \(lastName)"
+        commentLabel.text = comment
+        dateAddedLabel.text = "\(dateAdded)"
+        
+        profilePictureView.configureView(text: profilePictureUrl)
     }
 }
 
