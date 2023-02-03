@@ -22,12 +22,13 @@ class DownloadJson{
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode([String].self, from: data)
+                
                 completion(.success(jsonData))
             } catch {
                 completion(.failure(DownloadJsonError.DecodeFailed))
             }
+        }else{
+            completion(.failure(DownloadJsonError.FileNotFound))
         }
-        
-        completion(.failure(DownloadJsonError.FileNotFound))
     }
 }

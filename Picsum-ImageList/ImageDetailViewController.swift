@@ -15,6 +15,7 @@ class ImageDetailViewController: UIViewController{
     let imageImageView = UIImageView()
     let tableView = UITableView()
     let commentListResult = BehaviorRelay<[String]>(value: [])
+    let commentViewModel = CommentViewModel.instance
     
     
     override func viewDidLoad() {
