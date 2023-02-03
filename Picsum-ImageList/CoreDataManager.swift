@@ -49,4 +49,14 @@ class CoreDataManager{
         }
     }
     
+    func deleteComment(comment: CommentEntity){
+        self.context.delete(comment)
+        
+        do{
+            try self.context.save()
+        }catch{
+            
+        }
+    }
+    
 }

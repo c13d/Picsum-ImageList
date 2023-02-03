@@ -43,6 +43,10 @@ extension ImageDetailViewController{
             cell.configureCell(commentModel: element)
         }.disposed(by: disposeBag)
         
+        tableView.rx.itemDeleted.subscribe(onNext: { [weak self] indexPath in
+            guard let self = self, let id = self.id else { return }
+            self.commentViewModel.deleteCommentAt(indexPath: indexPath, id: id)
+        }).disposed(by: disposeBag)
     }
 }
 

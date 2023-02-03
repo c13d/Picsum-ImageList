@@ -55,6 +55,13 @@ class CommentViewModel{
         fetchComments(id: id)
     }
     
+    func deleteCommentAt(indexPath: IndexPath, id: Int){
+        let toBeDeleted = commentListResult.value[indexPath.row]
+        coreDataManager.deleteComment(comment: toBeDeleted)
+        
+        fetchComments(id: id)
+    }
+    
 }
 
 extension CommentViewModel{
