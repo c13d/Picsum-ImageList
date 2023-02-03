@@ -16,9 +16,13 @@ class CoreDataManager{
     func fetchComments(id: Int) -> [CommentEntity]{
         var comments = [CommentEntity]()
         do{
-            let request = CommentEntity.fetchRequest() as NSFetchRequest<CommentEntity>
             
+            let idPredicate = NSPredicate(format: "id == \(id)")
+            
+            let request = CommentEntity.fetchRequest() as NSFetchRequest<CommentEntity>
             let sort = NSSortDescriptor(key: "dateAdded", ascending: true)
+            
+            request.predicate = idPredicate
             request.sortDescriptors = [sort]
             
             comments = try context.fetch(request)

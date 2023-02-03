@@ -16,18 +16,17 @@ class ImageDetailViewController: UIViewController{
     let tableView = UITableView()
     let commentViewModel = CommentViewModel.instance
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         layout()
         
         bindTableView()
-        commentViewModel.fetchComments(id: 1)
     }
     func bind(model: ImageModel){
         print(model)
         imageImageView.image = UIImage(named: "sampleImage")
+        commentViewModel.fetchComments(id: Int(model.id) ?? -1)
     }
 
 }
