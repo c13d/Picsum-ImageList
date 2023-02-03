@@ -14,7 +14,6 @@ class ImageDetailViewController: UIViewController{
     let disposeBag = DisposeBag()
     let imageImageView = UIImageView()
     let tableView = UITableView()
-    let commentListResult = BehaviorRelay<[String]>(value: [])
     let commentViewModel = CommentViewModel.instance
     
     
@@ -24,9 +23,7 @@ class ImageDetailViewController: UIViewController{
         layout()
         
         bindTableView()
-        
-        let dummyList = ["a","b","c"]
-        commentListResult.accept(dummyList)
+        commentViewModel.fetchNewComment()
     }
     func bind(model: ImageModel){
         print(model)
@@ -38,12 +35,11 @@ class ImageDetailViewController: UIViewController{
 
 extension ImageDetailViewController{
     func bindTableView(){
-        commentListResult.asObservable()
+        commentViewModel.commentListResult.asObservable()
             .bind(to: tableView.rx
                 .items(cellIdentifier: CommentTableViewCell.reuseID, cellType: CommentTableViewCell.self))
         {   index, element, cell in
             cell.configureCell()
-            
         }.disposed(by: disposeBag)
         
     }
