@@ -44,6 +44,7 @@ extension ImageDetailViewController{
             .bind(to: tableView.rx
                 .items(cellIdentifier: CommentTableViewCell.reuseID, cellType: CommentTableViewCell.self))
         {   index, element, cell in
+            cell.selectionStyle = .none
             cell.configureCell(commentModel: element)
         }.disposed(by: disposeBag)
         

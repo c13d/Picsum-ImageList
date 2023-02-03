@@ -31,6 +31,7 @@ extension MainViewController{
             .bind(to: tableView.rx
                 .items(cellIdentifier: ImageTableViewCell.reuseID, cellType: ImageTableViewCell.self))
         {   index, element, cell in
+            cell.selectionStyle = .none
             cell.configureCell(imageModel: element)
             
         }.disposed(by: disposeBag)
