@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SDWebImage
 
 class MainViewController: UIViewController{
     let disposeBag = DisposeBag()
@@ -21,7 +22,11 @@ class MainViewController: UIViewController{
         layout()
         bindTableView()
         
+        // Setting max memory
+        SDImageCache.shared.config.maxMemoryCost = 1000000 * 200 // 200 MB
+        
         imageViewModel.fetchImages()
+        
     }
 }
 

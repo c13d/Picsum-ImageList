@@ -46,6 +46,7 @@ class ImageTableViewCell: UITableViewCell{
     func configureCell(imageModel: ImageModel){
         authorLabel.text = "\(imageModel.author)"
         
+        let transformer = SDImageResizingTransformer(size: CGSize(width: imageSize, height: imageSize), scaleMode: .fill)
         imageImageView.sd_setImage(with: URL(string: imageModel.download_url)){ [weak self]image,_,_,_ in
             guard let self = self else { return }
             
