@@ -23,6 +23,7 @@ class MainViewController: UIViewController{
         bindTableView()
         
         // Setting max memory
+        
         SDImageCache.shared.config.maxMemoryCost = 1000000 * 200 // 200 MB
         
         imageViewModel.fetchImages()
