@@ -66,44 +66,89 @@ class CommentViewModel{
 
 extension CommentViewModel{
     func downloadLocalJson(){
-        downloadJson.downloadJson(fileName: "firstNames") { [weak self] resultModel in
-            guard let self = self else { return }
-            switch resultModel{
-                case .success(let result):
-                    self.firstNames = result
-                case .failure(let error):
-                    print(error)
-            }
-        }
         
-        downloadJson.downloadJson(fileName: "lastNames") { [weak self] resultModel in
-            guard let self = self else { return }
-            switch resultModel{
-                case .success(let result):
-                    self.lastNames = result
-                case .failure(let error):
-                    print(error)
+        downloadJson.downloadJson(fileName: "firstNames").subscribe { event in
+            switch event {
+            case .next(let result):
+                self.firstNames = result
+            case .error(let error):
+                print(error)
+            case .completed:
+                print("complete download firstNames")
             }
-        }
+        }.disposed(by: disposeBag)
         
-        downloadJson.downloadJson(fileName: "nouns") { [weak self] resultModel in
-            guard let self = self else { return }
-            switch resultModel{
-                case .success(let result):
-                    self.nouns = result
-                case .failure(let error):
-                    print(error)
+        downloadJson.downloadJson(fileName: "lastNames").subscribe { event in
+            switch event {
+            case .next(let result):
+                self.lastNames = result
+            case .error(let error):
+                print(error)
+            case .completed:
+                print("complete download lastNames")
             }
-        }
+        }.disposed(by: disposeBag)
         
-        downloadJson.downloadJson(fileName: "verbs") { [weak self] resultModel in
-            guard let self = self else { return }
-            switch resultModel{
-                case .success(let result):
-                    self.verbs = result
-                case .failure(let error):
-                    print(error)
+        downloadJson.downloadJson(fileName: "nouns").subscribe { event in
+            switch event {
+            case .next(let result):
+                self.nouns = result
+            case .error(let error):
+                print(error)
+            case .completed:
+                print("complete download nouns")
             }
-        }
+        }.disposed(by: disposeBag)
+        
+        downloadJson.downloadJson(fileName: "verbs").subscribe { event in
+            switch event {
+            case .next(let result):
+                self.verbs = result
+            case .error(let error):
+                print(error)
+            case .completed:
+                print("complete download verbs")
+            }
+        }.disposed(by: disposeBag)
+        
+//        downloadJson.downloadJson(fileName: "firstNames") { [weak self] resultModel in
+//            guard let self = self else { return }
+//            switch resultModel{
+//                case .success(let result):
+//                    self.firstNames = result
+//                case .failure(let error):
+//                    print(error)
+//            }
+//        }
+//
+//        downloadJson.downloadJson(fileName: "lastNames") { [weak self] resultModel in
+//            guard let self = self else { return }
+//            switch resultModel{
+//                case .success(let result):
+//                    self.lastNames = result
+//                case .failure(let error):
+//                    print(error)
+//            }
+//        }
+//
+//        downloadJson.downloadJson(fileName: "nouns") { [weak self] resultModel in
+//            guard let self = self else { return }
+//            switch resultModel{
+//                case .success(let result):
+//                    self.nouns = result
+//                case .failure(let error):
+//                    print(error)
+//            }
+//        }
+//
+//        downloadJson.downloadJson(fileName: "verbs") { [weak self] resultModel in
+//            guard let self = self else { return }
+//            switch resultModel{
+//                case .success(let result):
+//                    self.verbs = result
+//                case .failure(let error):
+//                    print(error)
+//            }
+//        }
     }
 }

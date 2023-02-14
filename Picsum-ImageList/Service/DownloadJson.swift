@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 
 enum DownloadJsonError: Error{
     case FileNotFound
@@ -15,20 +16,43 @@ enum DownloadJsonError: Error{
 class DownloadJson{
     static let instance = DownloadJson()
     
-    func downloadJson(fileName: String, completion: @escaping (_ resultModel: Result<[String], Error>) -> ()) {
+    func downloadJson(fileName: String) -> Observable<[String]> {
         
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([String].self, from: data)
-                
-                completion(.success(jsonData))
-            } catch {
-                completion(.failure(DownloadJsonError.DecodeFailed))
+        return Observable<[String]>.create { observer in
+            
+            if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    let decoder = JSONDecoder()
+                    let jsonData = try decoder.decode([String].self, from: data)
+                    
+                    observer.onNext(jsonData)
+                    observer.onCompleted()
+                } catch {
+                    observer.onError(DownloadJsonError.DecodeFailed)
+                }
+            }else{
+                observer.onError(DownloadJsonError.FileNotFound)
             }
-        }else{
-            completion(.failure(DownloadJsonError.FileNotFound))
+            return Disposables.create()
         }
+        
     }
+    
+//    func downloadJson(fileName: String, completion: @escaping (_ resultModel: Result<[String], Error>) -> ()) {
+//        
+//        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+//            do {
+//                let data = try Data(contentsOf: url)
+//                let decoder = JSONDecoder()
+//                let jsonData = try decoder.decode([String].self, from: data)
+//                
+//                completion(.success(jsonData))
+//            } catch {
+//                completion(.failure(DownloadJsonError.DecodeFailed))
+//            }
+//        }else{
+//            completion(.failure(DownloadJsonError.FileNotFound))
+//        }
+//    }
 }
