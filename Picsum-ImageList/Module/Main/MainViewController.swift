@@ -58,7 +58,7 @@ extension MainViewController{
             
   
             if offSetY > (contentHeight - self.tableView.frame.size.height - 100) {
-                self.imageViewModel.fetchMoreData.onNext(())
+                self.imageViewModel.fetchImages()
                 
             }
         }.disposed(by: disposeBag)
