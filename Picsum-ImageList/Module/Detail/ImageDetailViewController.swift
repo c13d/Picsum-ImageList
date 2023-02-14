@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SDWebImage
 
 class ImageDetailViewController: UIViewController{
     
@@ -26,12 +27,9 @@ class ImageDetailViewController: UIViewController{
     }
     func bind(model: ImageModel){
         guard let id = Int(model.id) else { return }
-        imageImageView.image = UIImage(named: "sampleImage")
-        imageImageView.sd_setImage(with: URL(string: model.download_url)){ [weak self]image,_,_,_ in
-            guard let self = self else { return }
-            
-            self.imageImageView.image = self.imageImageView.image?.resizeImageTo(size: CGSize(width: 400, height: 220))
-        }
+        
+        let transformer = SDImageResizingTransformer(size: CGSize(width: 400, height: 200), scaleMode: .aspectFill)
+        imageImageView.sd_setImage(with: URL(string: model.download_url), placeholderImage: nil, context: [.imageTransformer: transformer])
         commentViewModel.fetchComments(id: id)
         self.id = id
     }

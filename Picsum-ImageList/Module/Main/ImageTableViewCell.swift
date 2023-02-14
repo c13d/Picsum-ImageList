@@ -46,13 +46,9 @@ class ImageTableViewCell: UITableViewCell{
     func configureCell(imageModel: ImageModel){
         authorLabel.text = "\(imageModel.author)"
         
-        let transformer = SDImageResizingTransformer(size: CGSize(width: imageSize, height: imageSize), scaleMode: .fill)
-        imageImageView.sd_setImage(with: URL(string: imageModel.download_url)){ [weak self]image,_,_,_ in
-            guard let self = self else { return }
-            
-            self.imageImageView.image = self.imageImageView.image?.resizeImageTo(size: CGSize(width: self.imageSize, height: self.imageSize))
-            
-        }
+        let transformer = SDImageResizingTransformer(size: CGSize(width: imageSize, height: imageSize), scaleMode: .aspectFill)
+        imageImageView.sd_setImage(with: URL(string: imageModel.download_url), placeholderImage: nil, context: [.imageTransformer: transformer])
+        
     }
 }
 
@@ -69,7 +65,7 @@ extension ImageTableViewCell{
         imageImageView.layer.masksToBounds = true
         imageImageView.layer.cornerRadius = 10
         imageImageView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        imageImageView.contentMode = .scaleToFill
+        imageImageView.contentMode = .scaleAspectFill
         
         authorTitleLabel.text = "Author:"
         authorTitleLabel.textAlignment = .center
