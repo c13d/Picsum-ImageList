@@ -10,5 +10,10 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'Alamofire'
 pod 'SDWebImage'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/Auth'
+pod 'SDWebImage'
 
 end
